@@ -7,8 +7,8 @@ let diametroBolinha = 20;
 let raioBolinha = 20 / 2;
 
 //velocidades da bolinha
-let velocidadeXbolinha = 4;
-let velocidadeYbolinha = 4;
+let velocidadeXbolinha = 5;
+let velocidadeYbolinha = 5;
 
 //variaveis da raquete 1
 let xRaquete = 5;
@@ -50,11 +50,9 @@ function draw() {
   colisaoBolinha();
   mostraRaquete(xRaquete, yRaquete);
   movimentaRaquete();
-  //verificaColisao();
   colisaoBiblioteca(xRaquete, yRaquete);
   mostraRaquete(xRaquete2, yRaquete2);
-  movimentaRaquete2();
-  //multplayer();
+  multiplayer();
   colisaoBiblioteca(xRaquete2, yRaquete2);
   placar();
   marcaPontos();
@@ -84,12 +82,21 @@ function mostraRaquete(x, y){
 }
 
 function movimentaRaquete(){
+  if(keyIsDown(87)){
+    yRaquete -= 10;      
+  }
+  if(keyIsDown(83)){
+    yRaquete += 10;  
+  }
+}
+
+function multiplayer() {
   if(keyIsDown(UP_ARROW)){
-    yRaquete -= 5;      
-  }
-  if(keyIsDown(DOWN_ARROW)){
-    yRaquete += 5;  
-  }
+ yRaquete2 -= 10;      
+}
+if(keyIsDown(DOWN_ARROW)){
+ yRaquete2 += 10;  
+}
 }
 
 function colisaoBiblioteca(x, y){
@@ -99,11 +106,6 @@ function colisaoBiblioteca(x, y){
     velocidadeXbolinha *= -1;
     raquetada.play();
   }
-}
-
-function movimentaRaquete2() {
-    velocidadeYraquete2 = yBolinha - yRaquete2 - wRaquete / 2 - 50;
-    yRaquete2 += velocidadeYraquete2;
 }
 
 function placar(){

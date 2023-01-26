@@ -1,0 +1,24 @@
+{
+  "name": "pong_by_cr0nik",
+  "version": "1.0.0",
+  "description": "primeiro jogo",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cr0nik/Pong_By_Cr0nik.git"
+  },
+  "author": "Cr0nik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cr0nik/Pong_By_Cr0nik/issues"
+  },
+  "homepage": "https://github.com/Cr0nik/Pong_By_Cr0nik#readme",
+  "devDependencies": {
+    "electron": "^22.1.0",
+    "electron-builder": "^23.6.0"
+  }
+}

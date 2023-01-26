@@ -7,8 +7,8 @@ let diametroBolinha = 20;
 let raioBolinha = 20 / 2;
 
 //velocidades da bolinha
-let velocidadeXbolinha = 5;
-let velocidadeYbolinha = 5;
+let velocidadeXbolinha = 4;
+let velocidadeYbolinha = 4;
 
 //variaveis da raquete 1
 let xRaquete = 5;
@@ -60,8 +60,8 @@ function draw() {
 }
 
 function bolinhaNaoFicaPresa(){
-  if (xBolinha - raio < 0){
-  xBolinha = 23
+  if (xBolinha - raioBolinha < 0){
+  xBolinha = 30
   }
 }
 

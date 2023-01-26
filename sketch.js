@@ -56,6 +56,13 @@ function draw() {
   colisaoBiblioteca(xRaquete2, yRaquete2);
   placar();
   marcaPontos();
+  bolinhaNaoFicaPresa();
+}
+
+function bolinhaNaoFicaPresa(){
+  if (xBolinha - raio < 0){
+  xBolinha = 23
+  }
 }
 
 function mostraBolinha(){
